@@ -18,9 +18,18 @@ class MainActivity : AppCompatActivity() {
             resultTextView.text = "6"
         }
 
-
-
+        rollButton.setOnClickListener {
+            rollDice()
+        }
     }
+    private fun rollDice() {
+        val dice = Dice(6)
+        val diceRoll = dice.roll()
+        val resultTextView: TextView = findViewById(R.id.textView3)
+        resultTextView.text = diceRoll.toString()
+    }
+
+
 
 
 }
