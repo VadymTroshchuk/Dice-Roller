@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
-import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -14,22 +13,19 @@ class MainActivity : AppCompatActivity() {
         val rollButton: Button = findViewById(R.id.button1)
         rollButton.setOnClickListener {
 
-        val resultTextView : TextView = findViewById(R.id.textView3)
+            val resultTextView: TextView = findViewById(R.id.textView3)
             resultTextView.text = "6"
         }
 
-        rollButton.setOnClickListener {
-            rollDice()
-        }
+        rollButton.setOnClickListener { rollDice() }
     }
+
     private fun rollDice() {
         val dice = Dice(6)
         val diceRoll = dice.roll()
         val resultTextView: TextView = findViewById(R.id.textView3)
         resultTextView.text = diceRoll.toString()
     }
-
-
 
 
 }
