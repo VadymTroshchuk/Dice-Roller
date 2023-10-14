@@ -2,4 +2,7 @@
     <string name="app_name">Dice Roller</string>
     <string name="your_project_name">Dice Roller</string>
     <string name="toolbar_title">Dice Roller</string>
+    <string name="button_text">ROLL</string>
+    <string name="roll_value"></string>
+
 </resources>
